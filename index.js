@@ -20,6 +20,7 @@ app.delete('/user', (req, res) => {
     res.send('Got a DELETE request at /user')
 })
 
+
 app.listen(PORT, () => {
-    console.log("Server listening on port http://localhost:" + PORT)
+    console.log("Exercici 2 - Server listening on port http://localhost:" + PORT)
 })
