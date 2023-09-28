@@ -1,0 +1,16 @@
+{
+  "name": "express---exercici-3",
+  "version": "1.0.0",
+  "description": "Cada branca del repositori té la solució de l'exercici amb el mateix nom.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ferran",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
