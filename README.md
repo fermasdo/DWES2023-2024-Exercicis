@@ -2,6 +2,11 @@
 
 Cada branca del repositori té la solució de l'exercici amb el mateix nom.
 
+Per arrancar:
+- `npm install`
+- `npm run start`
+
+
 * Introducció:
     * 
 * Express:
