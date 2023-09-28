@@ -1,0 +1,65 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Exercici 2 Express",
+    "dateExported": "2023-09-28T10:20:30.248Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "886b7072-acc1-48cb-8a37-bff6458bea52",
+            "colId": "b576ee83-80e4-4128-9e2c-c84bc60fb9b1",
+            "containerId": "",
+            "name": "GET localhost",
+            "url": "http://localhost:3000/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-09-28T10:18:13.968Z",
+            "modified": "2023-09-28T10:19:01.991Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "bd51528d-aed6-444e-a40f-d0a4bdac5c8d",
+            "colId": "b576ee83-80e4-4128-9e2c-c84bc60fb9b1",
+            "containerId": "",
+            "name": "POST localhost",
+            "url": "http://localhost:3000/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-09-28T10:19:10.661Z",
+            "modified": "2023-09-28T10:19:17.822Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8ecff5f3-fccd-4943-a690-3a7d14ea9ad3",
+            "colId": "b576ee83-80e4-4128-9e2c-c84bc60fb9b1",
+            "containerId": "",
+            "name": "PUT /user",
+            "url": "http://localhost:3000/user",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-09-28T10:19:34.821Z",
+            "modified": "2023-09-28T10:19:50.401Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "aa84b257-13b9-4f5f-8d0c-b7271dd1277d",
+            "colId": "b576ee83-80e4-4128-9e2c-c84bc60fb9b1",
+            "containerId": "",
+            "name": "DELETE /user",
+            "url": "http://localhost:3000/user",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-09-28T10:20:03.205Z",
+            "modified": "2023-09-28T10:20:11.464Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
