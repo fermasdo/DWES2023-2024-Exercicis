@@ -9,5 +9,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`App is running on http://localhost:${PORT}`)
+  console.log(`Exercici 3 - App is running on http://localhost:${PORT}`)
 })
