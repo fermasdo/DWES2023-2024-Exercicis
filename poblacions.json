@@ -1,0 +1,31 @@
+{
+    "pobles": [
+      {
+        "nom": "Poble1",
+        "habitants": 1000,
+        "superficie_km2": 10.5,
+        "coordenades": {
+          "latitud": 38.12345,
+          "longitud": -0.67890
+        }
+      },
+      {
+        "nom": "Poble2",
+        "habitants": 1500,
+        "superficie_km2": 8.2,
+        "coordenades": {
+          "latitud": 38.54321,
+          "longitud": -0.98765
+        }
+      },
+      {
+        "nom": "Poble3",
+        "habitants": 800,
+        "superficie_km2": 12.3,
+        "coordenades": {
+          "latitud": 38.11111,
+          "longitud": -0.55555
+        }
+      }
+    ]
+  }
