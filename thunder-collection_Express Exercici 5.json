@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Express Exercici 5",
+    "dateExported": "2023-10-02T21:19:54.027Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "47fef5bf-287e-4ed6-82ed-446b0c03dfdf",
+            "colId": "4b1baf92-f3a2-42fb-9bd3-09e70a11f247",
+            "containerId": "",
+            "name": "Express Exercici 5",
+            "url": "http://localhost:3000/api/dades",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-10-02T21:19:36.742Z",
+            "modified": "2023-10-02T21:19:36.742Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{ \"usuari\" : { \"nom\":\"Ferran\", \"ciutat\": \"Ontinyent\" } }",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
