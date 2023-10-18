@@ -6,10 +6,4 @@ Per arrancar:
 - `npm install`
 - `npm run start`
 
-
-* Introducció:
-    * 
-* Express:
-    * Exercici 1: Servidor bàsic
-    * Exercici 2: Proves a diverses rutes (peticions)
-    * Exercici 3:
+En l'arxiu `thunder-collection_PeticionsMovies.json` teniu la col·lecció de request de prova.

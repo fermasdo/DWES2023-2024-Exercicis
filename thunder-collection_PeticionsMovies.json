@@ -1,0 +1,144 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Express Exercici 6",
+    "dateExported": "2023-10-18T12:03:19.823Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "89370996-1aaa-4f99-b4f7-8a329888bdad",
+            "colId": "d7f557e9-d001-4156-8be0-e70ee02f0a12",
+            "containerId": "",
+            "name": "Obtenir totes les pelis",
+            "url": "http://localhost:3000/movies",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-10-05T21:25:43.063Z",
+            "modified": "2023-10-05T21:25:50.168Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "86253e75-8c13-43bf-ba3c-47e29948cb50",
+            "colId": "d7f557e9-d001-4156-8be0-e70ee02f0a12",
+            "containerId": "",
+            "name": "Obtenir pelis ordenades per Puntuació",
+            "url": "http://localhost:3000/movies?orderBy=rate_desc&genre=Sci-Fi",
+            "method": "GET",
+            "sortNum": 15000,
+            "created": "2023-10-18T11:53:00.675Z",
+            "modified": "2023-10-18T11:56:17.555Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "orderBy",
+                    "value": "rate_desc",
+                    "isPath": false
+                },
+                {
+                    "name": "genre",
+                    "value": "Sci-Fi",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "b1f545fd-b182-4db9-a72c-db130299d9ae",
+            "colId": "d7f557e9-d001-4156-8be0-e70ee02f0a12",
+            "containerId": "",
+            "name": "Obtenir pelis ordenades i filtrades",
+            "url": "http://localhost:3000/movies?orderBy=rate_desc&anyInicial=2000&anyFinal=2010",
+            "method": "GET",
+            "sortNum": 17500,
+            "created": "2023-10-18T11:54:50.757Z",
+            "modified": "2023-10-18T12:02:41.886Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "orderBy",
+                    "value": "rate_desc",
+                    "isPath": false
+                },
+                {
+                    "name": "anyInicial",
+                    "value": "2000",
+                    "isPath": false
+                },
+                {
+                    "name": "anyFinal",
+                    "value": "2010",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "136dcc92-91c8-4809-9f7c-09c9292dbe94",
+            "colId": "d7f557e9-d001-4156-8be0-e70ee02f0a12",
+            "containerId": "",
+            "name": "Obtenir una peli concreta per ID",
+            "url": "http://localhost:3000/movies/c906673b-3948-440",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-10-05T21:26:10.110Z",
+            "modified": "2023-10-10T14:59:18.698Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e1b023a8-fb8b-4d91-9125-a1ca2863fddc",
+            "colId": "d7f557e9-d001-4156-8be0-e70ee02f0a12",
+            "containerId": "",
+            "name": "Obtenir pelis segons el gènere",
+            "url": "http://localhost:3000/movies",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-10-05T21:26:56.126Z",
+            "modified": "2023-10-10T15:03:08.711Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3d095327-fbd4-4f05-bca0-3932cf3fcb00",
+            "colId": "d7f557e9-d001-4156-8be0-e70ee02f0a12",
+            "containerId": "",
+            "name": "Crear una peli",
+            "url": "http://localhost:3000/movies",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-10-05T21:27:23.182Z",
+            "modified": "2023-10-11T21:58:09.669Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"title\": \"22\",\n    \"year\": 1994,\n    \"director\": \"Director inventat\",\n    \"duration\": 142,\n    \"poster\": \"https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp\",\n    \"genre\": [\n      \"Drama\"\n    ],\n    \"rate\": 9.3\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bc5ebf59-fae0-414c-8bb2-fdd8b099970f",
+            "colId": "d7f557e9-d001-4156-8be0-e70ee02f0a12",
+            "containerId": "",
+            "name": "Actualitzar peli",
+            "url": "http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3",
+            "method": "PATCH",
+            "sortNum": 50000,
+            "created": "2023-10-10T08:29:42.219Z",
+            "modified": "2023-10-17T19:33:12.401Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"year\": 2022\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
