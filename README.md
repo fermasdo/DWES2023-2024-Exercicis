@@ -6,10 +6,9 @@ Per arrancar:
 - `npm install`
 - `npm run start`
 
+- `nps servor web`
 
-* Introducció:
-    * 
 * Express:
-    * Exercici 1: Servidor bàsic
-    * Exercici 2: Proves a diverses rutes (peticions)
-    * Exercici 3:
+    
+ Prova en Front-End per veure com s'usa en l'API que estem implementant en una web en JavaScript.
+
