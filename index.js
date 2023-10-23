@@ -1,13 +1,12 @@
-const express = require('express')
-const app = express()
+const mongoose = require("mongoose");
+const Llibre = require(__dirname + "/models/llibre.js");
 
-const PORT = 3000
+// Local MongoDB connection
+mongoose
+  .connect(
+    'mongodb://root:example@127.0.0.1:27017/llibres?authSource=admin',
+    { useNewUrlParser: true }
+  )
+  .then(() => console.log('Connected to MongoDB Local!'))
+  .catch(err => console.log(err))
 
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.listen(PORT, () => {
-  console.log(`Exercici 3 - App is running on http://localhost:${PORT}`)
-})
