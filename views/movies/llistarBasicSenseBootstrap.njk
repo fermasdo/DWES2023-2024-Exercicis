@@ -1,0 +1,17 @@
+{% extends "../base.njk" %}
+
+{% block titol %}Pel·lícules | Llistat{% endblock %}
+
+{% block contingut %}
+
+ <h1>Llistat de pel·lícules</h1>
+
+    <ul>
+        {% for movie in movies %}
+            <li> {{ movie.title }} </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
+

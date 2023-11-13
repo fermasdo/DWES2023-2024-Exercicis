@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block titol %} {% endblock %}</title>
+        
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        
+    </head>
+
+    <body>
+    
+    {% include "menu.njk" %}
+    
+
+    <div class="container py-3">
+        {% block contingut %}
+        {% endblock %}
+    </div>
+    
+
+    {% include "peu.njk" %}
+
+    </body>
+
+</html>

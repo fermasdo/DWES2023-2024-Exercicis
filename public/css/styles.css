@@ -1,0 +1,17 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+.container {
+  flex: 1;
+}
+
+.poster{
+  max-width: 80%;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
