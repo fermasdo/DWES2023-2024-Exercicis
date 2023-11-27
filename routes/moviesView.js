@@ -19,6 +19,8 @@ router.get('/editar/:id',moviesController.editMovieView)
 // POST /movies/actualitzar/:id - Actualitza una pel·lícula de la llista
 router.post('/actualitzar/:id',moviesController.updateMovieView)
 
+router.post('/crear',moviesController.updateMovieView)
+
 
 
 

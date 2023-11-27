@@ -1,5 +1,6 @@
 const Movie = require('../models/movies.js')
 
+
 // GET /api/movies - Retorna la llista de pel·lícules filtrant per gènere
 exports.getMovies = async (req, res) => {
   const { genre } = req.query;
@@ -39,7 +40,7 @@ exports.getMoviesView = async (req, res) => {
 
 // GET /movies/inserir - Mostra el formulari d'inserció de pel·lícules
 exports.addMoviesView = async (req, res) => {
-  res.render('movies/inserir.njk');
+  res.render('movies/editar.njk');
 }
 
 
@@ -109,9 +110,16 @@ exports.updateMovieView = async (req, res) => {
   try{
     const { title, year, director, duration, genre, rate, poster } = req.body;
 
-    await Movie.findByIdAndUpdate(id, 
-      {title: title, year: year, director: director, duration: duration, genre: genre, rate: rate, poster: poster},{runValidators: true})
+    if ( !id ) {  // Crear una nova pel·lícula
+      newMovie = new Movie(req.body)
+      await newMovie.save()
+    }
+    else{ // Actualitzar una pel·lícula existent  
+      await Movie.findByIdAndUpdate(id, 
+        {title: title, year: year, director: director, duration: duration, genre: genre, rate: rate, poster: poster},{runValidators: true})  
+    }
 
+    
     res.redirect('/movies')
   } catch (error) {
     const movie = new Movie(req.body) // Creem un nou objecte Movie amb les dades antigues del formulari

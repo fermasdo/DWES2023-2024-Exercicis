@@ -17,6 +17,8 @@ const verifyToken = (req, res, next) => {
         // Validar el token
         const verified = jwt.verify(tokenWithoutBearer, process.env.SECRET)
         req.user = verified
+        
+        // Continuar amb la petició
         next()
     } catch (error) {
         res.status(400).json({

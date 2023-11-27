@@ -4,55 +4,85 @@
 
 {% block contingut %}
 
-<h1>Editar pel·lícula</h1>
+    <h1>Editar pel·lícula</h1>
 
-<div class="row">
-
-    <div class="col-md-6">
+    {% if movie %}
         <form action="/movies/actualitzar/{{movie._id}}" method="post">
-        <div class="form-group mb-3">
-            <label>Títol:</label>   
-            <input type="text" class="form-control" name="title" placeholder="Títol de la pel·lícula..." value="{{ movie.title}}">
-            {%if errors.title %} <div class="text-danger"> {{errors.title.message}}  </div> {% endif %}
-        </div>
-        <div class="form-group mb-3">
-            <label>Any:</label>
-            <input type="number" class="form-control" name="year"
+    {% else %}
+        <form action="/movies/crear" method="post">
+    {% endif %}
+
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="form-group mb-3">
+                        <label>Títol:</label>
+                        <input type="text" class="form-control" name="title" placeholder="Títol de la pel·lícula..." value="{{ movie.title}}">
+                        {%if errors.title %}
+                            <div class="text-danger">
+                                {{errors.title.message}}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Any:</label>
+                        <input type="number" class="form-control" name="year"
                     placeholder="Any de publicació..." value="{{ movie.year }}">
-            {%if errors.year %} <div class="text-danger"> {{errors.year.message}}  </div> {% endif %}
-        </div>
-        <div class="form-group mb-3">
-            <label>Director:</label>
-            <input type="text" class="form-control" name="director"
+                        {%if errors.year %}
+                            <div class="text-danger">
+                                {{errors.year.message}}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Director:</label>
+                        <input type="text" class="form-control" name="director"
                     placeholder="Nom del director..." value="{{ movie.director }}">
-        </div>
-        <div class="form-group mb-3">
-            <label>Duració:</label>
-            <input type="number" class="form-control" name="duration"
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Duració:</label>
+                        <input type="number" class="form-control" name="duration"
                     placeholder="Duració en minuts..." value="{{ movie.duration }}">
-            {%if errors.duration %} <div class="text-danger"> {{errors.duration.message}}  </div> {% endif %}
-        </div>
-        <div class="form-group mb-3">
-            <label>Gènere:</label>
-            <select class="form-control" name="genre" multiple>
-                <option value="Sci-Fi" {% if 'Sci-Fi' in movie.genre %} selected {% endif %} >Sci-Fi</option>
-                <option value="Crime" {% if 'Crime' in movie.genre %} selected {% endif %} >Crime</option>
-                <option value="Drama" {% if 'Drama' in movie.genre %} selected {% endif %} >Drama</option>
-            </select>
-        </div>
+                        {%if errors.duration %}
+                            <div class="text-danger">
+                                {{errors.duration.message}}
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="form-group mb-3">
+                        <select class="form-control" name="genre" multiple>
+                            <option value="Sci-Fi" {% if movie and 'Sci-Fi' in movie.genre %} selected {% endif %} >Sci-Fi</option>
+                            <option value="Crime" {% if movie and  'Crime' in movie.genre %} selected {% endif %} >Crime</option>
+                            <option value="Drama" {% if movie and  'Drama' in movie.genre %} selected {% endif %} >Drama</option>
+                        </select>
+                    </div>
 
-        <input type="hidden" name="poster" value="{{ movie.poster }}">
+                    
 
-        <button type="submit" class="btn btn-primary">
-            Enviar
-        </button>
-        </form>
-    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Enviar
+                    </button>
 
-    <div class="col-md-6">
-        <div class="poster">
-            <img src="{{movie.poster}}" alt="Póster de la pel·lícula {{movie.title}}" class="img-fluid" >
-        </div>
-    </div>
+                </div>
 
-{% endblock %}
+                <div class="col-md-6">
+                    <div class="poster">
+                        {% if not movie.poster %}
+                            <label>Póster:</label>
+                            <img src="/img/no-image.jpg" alt="No hi ha pòster" class="img-fluid" >
+                            <input type="text" class="form-control" name="poster"
+                    placeholder="URL póster..." value="{{ movie.poster }}">
+                            {%else%}
+                            <img src="{{movie.poster}}" alt="Póster de la pel·lícula {{movie.title}}" class="img-fluid" >
+                        {% endif %}
+                        {%if errors.poster %}
+                            <div class="text-danger">
+                                {{errors.poster.message}}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+            </form>
+
+        {% endblock %}
